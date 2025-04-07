@@ -1,0 +1,25 @@
+// Check naam
+    - Of de variabele bestaat en niet null is =>  empty($fName) 
+    - Is de variabele leeg? =>  empty($fName) 
+    - Alleen letters        =>  if (preg_match("/^[a-zA-Z]+$/", trim($naam))) echo "Naam bevat alleen letters!"
+
+
+// Check Bsn
+    - 8- of 9 cijfers => if (preg_match('/^\d{8,9}$/', $bsn))
+    
+
+
+
+// Check Postcode
+if (preg_match('/^[1-9][0-9]{3}\s?[A-Z]{2}$/', $postcode)) 
+
+// Check email
+    - if (preg_match("/^[\w\.-]+@[\w\.-]+\.\w{2,}$/", $email))-
+
+
+// Check telefoon nummer
+// Check Straat
+// Check Huisnummer
+// Check Woonplaats 
+// Check IBAN-rekeningnummer (optioneel)
+// Check Geboortedatum (optioneel)
