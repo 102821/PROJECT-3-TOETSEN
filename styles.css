@@ -10,6 +10,7 @@
 }
 body {
     margin: 0;
+    font-family: sans-serif;
 }
 ul {
     list-style: none;
@@ -34,16 +35,43 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 40px;
 }
 header .logo{
     cursor: pointer;
 }
 header nav {
     width: 33%;
+    z-index: 2;
 }
 header nav ul {
     display: flex;
-    gap: 30px;
+    gap: 10px;
+}
+@media (max-width: 992px) {
+    header nav ul {
+        flex-direction: column;
+        position: absolute;
+        right: 20px;
+        top: 90px;
+        justify-content: space-evenly;
+        background-color: black;
+        color: white;
+        height: 20px;
+        z-index: 1;
+        border-radius: 10px;
+        opacity: 0;
+        transition: 0.3s;
+        
+    }
+    header nav ul.active {
+        height: 250px;
+        opacity: 1;
+        
+    }
+    header .burger-menu {
+        display: block !important;
+    }
 }
 header nav ul li {
     transition: 0.3s;
@@ -73,14 +101,29 @@ header nav ul li a:hover::before {
     opacity: 1;
     width: calc(100% - 55px);
 }
-
+@media (max-width: 992px) {
+    header nav ul li:hover {
+        opacity: 1;
+    }
+    header nav ul li a::before {
+        background-color: var(--main-color-1);
+    }
+}
+header .burger-menu {
+    font-size: 25px;
+    cursor: pointer;
+}
 
 .hero-section {
     width: 80%;
+    height: 80vh;
     background-image: url('imgs/bg.png');
     margin: 10px auto 100px auto;
     background-size: cover;
+    background-position: left;
     position: relative;
+    margin-bottom: 80px;
+
 }
 .hero-section::before {
     content: '';
@@ -90,6 +133,131 @@ header nav ul li a:hover::before {
     background-color: rgb(0, 0, 0, 0.6);
 
 }
-.hero-section > div {
-    z
+.hero-section .content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+.hero-section .content h1 {
+    font-size: 38px;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    
+}
+.hero-section .content p {
+    color: white;
+    text-align: center;
+    font-size: 26px;
+    margin-top: 0px;
+    color: #d7d7d7;
+}
+@media (max-width: 768px) {
+    .hero-section .content {
+        padding: 10px;
+    }
+    .hero-section .content h1 {
+        font-size: 26px;
+    }
+    
+    .hero-section .content p {
+        font-size: 15px;
+
+    }
+}
+.products-section {
+    padding: 40px;
+    margin-bottom: 50px;
+}
+.products-section h2 {
+    color: var(--main-color-2);    
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 60px;
+}
+.products-section .products {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.products-section .products .product{
+    width: calc(100% / 4 - 30px);
+    border: 2px var(--main-color-1) solid;
+    border-radius: 5px;
+    padding: 20px;
+}
+@media (max-width: 992px) {
+    .products-section .products .product {
+        width: calc(100% / 3 - 30px);
+    }
+}
+@media (max-width: 767px) {
+    .products-section .products .product {
+        width: calc(100% / 1 - 30px);
+    }
+}
+.products-section .products .product img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.products-section .products .product .more {
+    color: var(--main-color-2);
+    font-weight: bold;
+}
+.products-section .products .product .product-price-c {
+    margin-bottom: 10px;
+}
+.products-section .products .product .cart-icon {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+.products-section .products .product .cart-icon i {
+    transition: 0.3s;
+}
+.products-section .products .product .cart-icon i:hover {
+    transform: translateY(-3px);
+}
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 40px;
+    color: white;
+    position: relative;
+}
+
+footer .toy-car {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 40px;
+    animation: moveCar 58s ease-in-out infinite;
+}
+
+@keyframes moveCar {
+    0% {
+        left: 0;
+    }
+    25% {
+        left: 50%;
+    }
+    50% {
+        left: 90%;
+    }
+    75% {
+        left: 50%;
+    }
+    100% {
+        left: 10px;
+    }
 }
