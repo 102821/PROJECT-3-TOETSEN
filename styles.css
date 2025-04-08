@@ -40,6 +40,11 @@ header {
 header .logo{
     cursor: pointer;
 }
+@media (max-width: 767px) {
+    header .logo img{
+        width: 150px;
+    }
+}
 header nav {
     width: 33%;
     z-index: 2;
@@ -57,14 +62,16 @@ header nav ul {
         justify-content: space-evenly;
         background-color: black;
         color: white;
-        height: 20px;
+        height: 0px;
         z-index: 1;
         border-radius: 10px;
         opacity: 0;
         transition: 0.3s;
+        overflow: hidden;
         
     }
     header nav ul.active {
+        overflow: visible;
         height: 250px;
         opacity: 1;
         
@@ -243,7 +250,131 @@ footer .toy-car {
     width: 40px;
     animation: moveCar 58s ease-in-out infinite;
 }
+/* ===========Products Details Pagina========== */
+.products-details {
+    margin-top: 100px;
+    padding: 50px;
+}
+.products-details  .product-detail  {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 40px;
+    flex-wrap: wrap;
+}
+.products-details .product-detail > img {
+    width: calc(50% - 20px);
+    border: 3px solid var(--main-color-2);
+    border-radius: 5px;
+}
 
+.products-details .product-detail > .info {
+    width: calc(50% - 40px);
+}
+@media (max-width: 767px) {
+    .products-details .product-detail > img {
+        width: 100%;
+    }
+    .products-details .product-detail > .info {
+        width: 100%;
+    }
+}
+
+.products-details .product-detail > .info  .product-price {
+    font-size: 80px;
+    margin-bottom: 60px;
+}
+.products-details .cart-icon i{
+    transition: 0.3s;
+    cursor: pointer;
+}
+.products-details .cart-icon i:hover {
+    transform: translateY(-3px);
+}
+.products-details .prodcut-desc {
+    color: var(--gray-color);
+    line-height: 35px;
+    max-width: 70%;
+}
+/* ===========Cart-page Pagina========== */
+.cart-page-container {
+    margin-top: 50px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    height: 80vh;
+}
+.cart-page-container .form {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 40px;
+}
+.cart-page-container .form > div {
+    width: 100%;
+}
+
+.cart-page-container .form > div .error{
+    color: red;
+}
+.cart-page-container .form > div label{
+    display: block;
+    font-weight:bold;
+    padding-bottom: 10px;
+}
+.cart-page-container .form > div input {
+    width: 80%;
+    background-color: var(--gray-bg);
+    border: none;
+    padding: 8px 5px;
+    border-radius: 5px;    
+}
+.cart-page-container .form #submit {
+    background-color: var(--main-color-2);
+    color: white;
+    padding: 6px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: .3s;
+    font-weight: bold;
+}
+.cart-page-container .form #submit:hover {
+    background-color: rgb(43, 31, 122, 0.9);
+    color: var(--main-color-1);
+}
+.cart-page-container .products-cart {
+    width: 35%;
+    background-color: var(--gray-bg);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cart-page-container .products-cart{
+    height: 100%;
+}
+.cart-page-container .products-cart .product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart-page-container .products-cart .product  > div img{
+    width: 50px;
+}
+.cart-page-container .products-cart .product  > div input {
+    width: 50px;
+}
+.cart-page-container .products-cart .total-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 @keyframes moveCar {
     0% {
         left: 0;

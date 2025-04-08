@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FunFactory</title>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Hamburgermenu-icoon -->
+    <!-- <i class="fa-solid fa-bars"></i> -->
+    <!-- Winkelmandje-icoon -->
+        <!-- <i class="fa-solid fa-shopping-cart"></i> -->
+</head>
+<body>
+    <header>
+        <div class="logo" onclick="location.href = 'index.html';"><img src="imgs/logo.png" alt=""></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Homepagina</a></li>
+                <li><a href="">Producten</a></li>
+                <li><a href="">Over</a></li>
+            </ul>
+        </nav>
+        <div class="burger-menu" style="display: none;"><i class="fa-solid fa-bars"></i></div>
+    </header>
+    <div class="cart-page-container">
+        <form action="" class="form">
+            <div>
+                <!-- <div class="error">Voer een geldig naam !!</div> -->
+                <label for="firstName">Voornaam: </label>
+                <input type="text" name="" id="firstName">
+            </div>
+            <div>
+                <label for="lastName">Achternaam: </label>
+                <input type="text" name="" id="lastName">
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" name="" id="email">
+            </div>
+            <div>
+                <label for="address">Straat (met huisnummer): </label>
+                <input type="text" name="" id="address">
+            </div>
+            <div>
+                <label for="postCode">Postcode: </label>
+                <input type="text" name="" id="postCode" pattern="">
+            </div>
+            <input type="submit" value="Bestelling afronden" id="submit">
+        </form>
+        <div class="products-cart">
+            <div class="products">
+                <div class="product">
+                    <div>
+                        <img src="imgs/products/p1.png" alt="">
+                        <input type="number" name="" id="" value="1" min="1" max="10">
+                        <h4 class="product-name">Product name</h4>
+                    </div>
+                    <span class="product-price">40$</span>
+                </div>
+            </div>
+            <div class="total-div">
+                <h4>Totaal:</h4>
+                <span class="total-span">40$</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="data.js"></script>
+</body>
+</html>
