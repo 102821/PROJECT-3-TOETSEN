@@ -1,4 +1,4 @@
-let navMenu = document.querySelector('nav ul')
+let navMenu = document.querySelector('nav ul');
 let burgeMenu = document.querySelector('.burger-menu');
 
 
@@ -15,7 +15,7 @@ burgeMenu.addEventListener('click', ()=> {
 // }
 // let cartDiv = document.querySelectorAll('');
 
-let form = document.getElementsByClassName('form')[0];
+let form = document.querySelector('.cart-page-container');
 console.log(form)
 
 // form.addEventListener('submit', (e)=> {
