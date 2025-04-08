@@ -9,7 +9,7 @@
     <!-- Hamburgermenu-icoon -->
     <!-- <i class="fa-solid fa-bars"></i> -->
     <!-- Winkelmandje-icoon -->
-        <!-- <i class="fa-solid fa-shopping-cart"></i> -->
+    <!-- <i class="fa-solid fa-shopping-cart"></i> -->
 </head>
 <body>
     <header>
@@ -26,25 +26,29 @@
     <div class="cart-page-container">
         <form action="" class="form">
             <div>
-                <!-- <div class="error">Voer een geldig naam !!</div> -->
+                <div class="error" id="fNameError"></div>
                 <label for="firstName">Voornaam: </label>
-                <input type="text" name="" id="firstName">
+                <input type="text" name="" id="firstName" required>
             </div>
             <div>
+                <div class="error" id="lNameError"></div>
                 <label for="lastName">Achternaam: </label>
-                <input type="text" name="" id="lastName">
+                <input type="text" name="" id="lastName" required>
             </div>
             <div>
+                <div class="error" id="emailError"></div>
                 <label for="email">Email: </label>
-                <input type="email" name="" id="email">
+                <input type="email" name="" id="email" required>
             </div>
             <div>
+                <div class="error" id="addressError"></div>
                 <label for="address">Straat (met huisnummer): </label>
-                <input type="text" name="" id="address">
+                <input type="text" name="" id="address" required>
             </div>
             <div>
+                <div class="error" id="postCodeError"></div>
                 <label for="postCode">Postcode: </label>
-                <input type="text" name="" id="postCode" pattern="">
+                <input type="text" name="" id="postCode" required>
             </div>
             <input type="submit" value="Bestelling afronden" id="submit">
         </form>
