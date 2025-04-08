@@ -277,6 +277,9 @@ footer .toy-car {
     width: calc(50% - 40px);
 }
 @media (max-width: 767px) {
+    .products-details .product-detail {
+        text-align: center;
+    }
     .products-details .product-detail > img {
         width: 100%;
     }
@@ -292,6 +295,7 @@ footer .toy-car {
 .products-details .cart-icon i{
     transition: 0.3s;
     cursor: pointer;
+    color: black;
 }
 .products-details .cart-icon i:hover {
     transform: translateY(-3px);
@@ -299,7 +303,12 @@ footer .toy-car {
 .products-details .prodcut-desc {
     color: var(--gray-color);
     line-height: 35px;
-    max-width: 70%;
+    width: 70%;
+}
+@media (max-width: 767px)  {
+    .products-details .prodcut-desc {
+        width: 100%;
+    }
 }
 /* ===========Cart-page Pagina========== */
 .cart-page-container {
