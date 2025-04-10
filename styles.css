@@ -414,6 +414,80 @@ footer .toy-car {
     justify-content: space-between;
     align-items: center;
 }
+
+/* result-pagina */
+.result-page-container {
+    text-align: center;
+}
+.result-page-container .check-img {
+    width: 140px;
+}
+.result-page-container > p {
+    color: gray;
+} 
+.result-page-container .customer-order-container {
+    margin: 50px auto 10px auto;
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    /* align-items: center; */
+    background-color: var(--gray-bg);
+    margin-bottom: 40px;
+}
+.customer-info {
+    width: 45%;
+}
+@media (max-width: 992px) {
+    .customer-info {
+        width: 100%;
+    }
+}
+.customer-info h3 {
+    margin-bottom: 40px;
+}
+.customer-info dl {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+}
+  
+.customer-info dt,
+.customer-info dd {
+    flex: 1 1 45%;
+    margin: 0;
+}
+
+.customer-info dt {
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.orders {
+    width: 45%;
+}
+@media (max-width: 992px) {
+    .orders {
+        width: 100%;
+    }
+}
+.orders h3 {
+    margin-bottom: 30px;
+}
+.orders .order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.orders .order .left{
+    display: flex;
+}
+.orders .order .left img {
+    width: 80px;
+    border-radius: 5px;
+    padding-right: 10px;
+}
 @keyframes moveCar {
     0% {
         left: 0;

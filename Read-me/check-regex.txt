@@ -23,3 +23,23 @@ if (preg_match('/^[1-9][0-9]{3}\s?[A-Z]{2}$/', $postcode))
 // Check Woonplaats 
 // Check IBAN-rekeningnummer (optioneel)
 // Check Geboortedatum (optioneel)
+
+
+// In php
+
+
+// Voornaam = 
+// Achternaam =
+// email = 
+// straat met huisnummer () =
+// Postcode
+// BSN = 
+// IBAN-rekeningnummer 
+
+
+
+// check pattern = if (preg_match('/your-pattern/', $yourVariable)) {
+    // Match found
+} else {
+    // No match
+}
